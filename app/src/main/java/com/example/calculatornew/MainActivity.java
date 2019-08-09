@@ -174,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
         btnEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                
                 value2 = Float.parseFloat(etResult.getText() + "");
 
                 if(addBoolean == true){
