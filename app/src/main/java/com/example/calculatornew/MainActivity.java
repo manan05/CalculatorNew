@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnAdd,btnSub,btnMul,btnDiv,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn0,btnEqual,btnClear;
+    Button btnAdd,btnSub,btnMul,btnDiv,btn1,btn2,btn3,btn4,btn5,btn6,
+            btn7,btn8,btn9,btn0,btnEqual,btnClear,btnDecimal,btnDummy;
     EditText etResult;
 
     Float value1,value2;
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         btn9 = findViewById(R.id.btn9);
         btnClear = findViewById(R.id.btnClear);
         btnEqual = findViewById(R.id.btnEqual);
+        btnDummy = findViewById(R.id.btnDummy);
+        btnDecimal = findViewById(R.id.btnDecimal);
 
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,6 +110,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 etResult.setText(etResult.getText() + "9") ;
+            }
+        });
+
+        btnDecimal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                etResult.setText(etResult.getText() + ".");
+            }
+        });
+
+        btnDummy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "NOPE",
+                        Toast.LENGTH_SHORT).show();
             }
         });
 
