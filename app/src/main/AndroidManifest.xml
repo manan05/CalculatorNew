@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/calculator_new_icon"
-        android:label="Amazing Calculator"
+        android:label="AmazingCalc"
         android:roundIcon="@mipmap/calculator_new_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
