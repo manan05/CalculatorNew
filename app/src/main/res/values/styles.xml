@@ -6,6 +6,31 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <!--Funtion Buttons Style-->
+    <style name="FunButtons">
+        <item name="android:textSize">40sp</item>
+        <item name="android:minHeight">80dp</item>
+        <item name="android:textColor">@color/colorFunButtonTxt</item>
+        <item name="android:background">@drawable/fun_squircle_buttons</item>
     </style>
 
+    <!--Number Buttons Style-->
+    <style name="NumButtons">
+        <item name="android:textSize">40sp</item>
+        <item name="android:minHeight">80dp</item>
+        <item name="android:textColor">@color/colorNumButtonTxt</item>
+        <item name="android:background">@drawable/num_squircle_buttons</item>
+    </style>
+
+    <!--Equal Button Style-->
+    <style name="EqualButton">
+        <item name="android:textSize">40sp</item>
+        <item name="android:minHeight">80dp</item>
+        <item name="android:textColor">@color/colorNumButtonTxt</item>
+        <item name="android:background">@drawable/equal_squircle_button</item>
+    </style>
 </resources>

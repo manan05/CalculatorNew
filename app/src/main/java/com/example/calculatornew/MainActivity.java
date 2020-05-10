@@ -5,14 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btnAdd,btnSub,btnMul,btnDiv,btn1,btn2,btn3,btn4,btn5,btn6,
-            btn7,btn8,btn9,btn0,btnEqual,btnClear,btnDecimal,btnDummy;
-    EditText etResult;
+            btn7,btn8,btn9,btn0,btnEqual,btnClear,btnDecimal,btn00;
+    TextView tvResult;
 
     Float value1,value2;
     Boolean addBoolean = false,subBoolean = false,mulBoolean = false,divBoolean = false;
@@ -22,12 +24,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etResult = findViewById(R.id.etResult);
+        tvResult = findViewById(R.id.tvUserResult);
         btnAdd = findViewById(R.id.btnAdd);
-        btnSub = findViewById(R.id.btnSub);
-        btnMul = findViewById(R.id.btnMul);
-        btnDiv = findViewById(R.id.btnDiv);
+        btnSub = findViewById(R.id.btnSubtract);
+        btnMul = findViewById(R.id.btnMultiply);
+        btnDiv = findViewById(R.id.btnDivide);
         btn0 = findViewById(R.id.btn0);
+        btn00 = findViewById(R.id.btn00);
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
         btn3 = findViewById(R.id.btn3);
@@ -39,27 +42,27 @@ public class MainActivity extends AppCompatActivity {
         btn9 = findViewById(R.id.btn9);
         btnClear = findViewById(R.id.btnClear);
         btnEqual = findViewById(R.id.btnEqual);
-        btnDummy = findViewById(R.id.btnDummy);
+
         btnDecimal = findViewById(R.id.btnDecimal);
 
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                etResult.setText(etResult.getText() + "0") ;
+                tvResult.setText(tvResult.getText() + "0") ;
             }
         });
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                etResult.setText(etResult.getText() + "1") ;
+                tvResult.setText(tvResult.getText() + "1") ;
             }
         });
 
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                etResult.setText(etResult.getText() + "2") ;
+                tvResult.setText(tvResult.getText() + "2") ;
             }
         });
 
@@ -67,77 +70,76 @@ public class MainActivity extends AppCompatActivity {
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                etResult.setText(etResult.getText() + "3") ;
+                tvResult.setText(tvResult.getText() + "3") ;
             }
         });
 
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                etResult.setText(etResult.getText() + "4") ;
+                tvResult.setText(tvResult.getText() + "4") ;
             }
         });
 
         btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                etResult.setText(etResult.getText() + "5") ;
+                tvResult.setText(tvResult.getText() + "5") ;
             }
         });
 
         btn6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                etResult.setText(etResult.getText() + "6") ;
+                tvResult.setText(tvResult.getText() + "6") ;
             }
         });
 
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                etResult.setText(etResult.getText() + "7") ;
+                tvResult.setText(tvResult.getText() + "7") ;
             }
         });
 
         btn8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                etResult.setText(etResult.getText() + "8") ;
+                tvResult.setText(tvResult.getText() + "8") ;
             }
         });
 
         btn9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                etResult.setText(etResult.getText() + "9") ;
+                tvResult.setText(tvResult.getText() + "9") ;
             }
         });
 
         btnDecimal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                etResult.setText(etResult.getText() + ".");
+                tvResult.setText(tvResult.getText() + ".");
             }
         });
 
-        btnDummy.setOnClickListener(new View.OnClickListener() {
+        btn00.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "NOPE",
-                        Toast.LENGTH_SHORT).show();
+                tvResult.setText(tvResult.getText() + "00");
             }
         });
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(etResult.getText().length() == 0){
-                    etResult.setText("");
+                if(tvResult.getText().length() == 0){
+                    tvResult.setText("");
                 }
                 else{
-                    value1 = Float.parseFloat(etResult.getText() + "");
+                    value1 = Float.parseFloat(tvResult.getText() + "");
                     addBoolean = true;
-                    etResult.setText("");
+                    tvResult.setText("");
                 }
             }
         });
@@ -145,13 +147,13 @@ public class MainActivity extends AppCompatActivity {
         btnSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(etResult.getText().length() == 0){
-                    etResult.setText("");
+                if(tvResult.getText().length() == 0){
+                    tvResult.setText("");
                 }
                 else{
-                    value1 = Float.parseFloat(etResult.getText() + "");
+                    value1 = Float.parseFloat(tvResult.getText() + "");
                     subBoolean = true;
-                    etResult.setText("");
+                    tvResult.setText("");
                 }
             }
         });
@@ -159,13 +161,13 @@ public class MainActivity extends AppCompatActivity {
         btnMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(etResult.getText().length() == 0){
-                    etResult.setText("");
+                if(tvResult.getText().length() == 0){
+                    tvResult.setText("");
                 }
                 else{
-                    value1 = Float.parseFloat(etResult.getText() + "");
+                    value1 = Float.parseFloat(tvResult.getText() + "");
                     mulBoolean = true;
-                    etResult.setText("");
+                    tvResult.setText("");
                 }
             }
         });
@@ -173,13 +175,13 @@ public class MainActivity extends AppCompatActivity {
         btnDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(etResult.getText().length() == 0){
-                    etResult.setText("");
+                if(tvResult.getText().length() == 0){
+                    tvResult.setText("");
                 }
                 else{
-                    value1 = Float.parseFloat(etResult.getText() + "");
+                    value1 = Float.parseFloat(tvResult.getText() + "");
                     divBoolean = true;
-                    etResult.setText("");
+                    tvResult.setText("");
                 }
             }
         });
@@ -187,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                etResult.setText("");
+                tvResult.setText("");
             }
         });
 
@@ -195,22 +197,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                value2 = Float.parseFloat(etResult.getText() + "");
+                value2 = Float.parseFloat(tvResult.getText() + "");
 
                 if(addBoolean == true){
-                    etResult.setText(value1 + value2 + "");
+                    tvResult.setText(value1 + value2 + "");
                     addBoolean = false;
                 }
                 else if(subBoolean == true){
-                    etResult.setText(value1 - value2 + "");
+                    tvResult.setText(value1 - value2 + "");
                     subBoolean = false;
                 }
                 else if(mulBoolean == true){
-                    etResult.setText(value1 * value2 + "");
+                    tvResult.setText(value1 * value2 + "");
                     mulBoolean = false;
                 }
                 else if(divBoolean == true){
-                    etResult.setText(value1 / value2 + "");
+                    tvResult.setText(value1 / value2 + "");
                     divBoolean = false;
                 }
             }

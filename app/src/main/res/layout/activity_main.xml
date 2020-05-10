@@ -9,186 +9,27 @@
     android:orientation="vertical">
 
 
-<!--    <EditText-->
-<!--        android:id="@+id/etResult"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="36dp"-->
-<!--        android:ems="10"-->
-<!--        android:inputType="number"-->
-<!--         />-->
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/calc_result"
 
-<!--    <Button-->
-<!--        android:id="@+id/btnAdd"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="8dp"-->
-<!--        android:text="+"-->
-<!--        app:layout_constraintBaseline_toBaselineOf="@+id/btnSub"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/btnSub"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
+        />
 
-<!--    <Button-->
-<!--        android:id="@+id/btnSub"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="36dp"-->
-<!--        android:text="-"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/btnEqual"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/btnMul"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/btnAdd" />-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="2dp"
+        android:gravity="bottom"
+        >
 
-<!--    <Button-->
-<!--        android:id="@+id/btnMul"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginEnd="2dp"-->
-<!--        android:text="*"-->
-<!--        app:layout_constraintBaseline_toBaselineOf="@+id/btnSub"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/btnDiv"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/btnSub" />-->
+        <include
+            layout="@layout/calc_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-<!--    <Button-->
-<!--        android:id="@+id/btnDiv"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginEnd="9dp"-->
-<!--        android:text="/"-->
-<!--        app:layout_constraintBaseline_toBaselineOf="@+id/btnMul"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/btnMul" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btn1"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="31dp"-->
-<!--        android:text="1"-->
-<!--        app:layout_constraintBaseline_toBaselineOf="@+id/btn2"-->
-<!--        app:layout_constraintStart_toStartOf="parent" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btn2"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="11dp"-->
-<!--        android:layout_marginTop="58dp"-->
-<!--        android:text="2"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/btn1"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/btnEqual" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btn3"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="13dp"-->
-<!--        android:text="3"-->
-<!--        app:layout_constraintBaseline_toBaselineOf="@+id/btn2"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/btn2" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btn4"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="4"-->
-<!--        app:layout_constraintBaseline_toBaselineOf="@+id/btn5"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/btn1" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btn5"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="11dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:text="5"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/btn4"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/btn2" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btn6"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="13dp"-->
-<!--        android:text="6"-->
-<!--        app:layout_constraintBaseline_toBaselineOf="@+id/btn5"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/btn5" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btn7"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="7"-->
-<!--        app:layout_constraintBaseline_toBaselineOf="@+id/btn8"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/btn4" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btn8"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="12dp"-->
-<!--        android:text="8"-->
-<!--        app:layout_constraintBottom_toTopOf="@+id/btn0"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/btn0" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btn9"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="13dp"-->
-<!--        android:text="9"-->
-<!--        app:layout_constraintBaseline_toBaselineOf="@+id/btn8"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/btn8" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btnEqual"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="261dp"-->
-<!--        android:backgroundTint="@android:color/holo_red_light"-->
-<!--        android:text="="-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/btnSub"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/btnSub"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btnClear"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="37dp"-->
-<!--        android:backgroundTint="@android:color/holo_green_light"-->
-<!--        android:text="C"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/btnDiv"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/btnDiv" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btn0"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="11dp"-->
-<!--        android:layout_marginTop="76dp"-->
-<!--        android:text="0"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/btn7"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/btn5" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btnDecimal"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="13dp"-->
-<!--        android:layout_marginTop="12dp"-->
-<!--        android:text="."-->
-<!--        app:layout_constraintStart_toEndOf="@+id/btn0"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/btn9" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/btnDummy"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="12dp"-->
-<!--        android:layout_marginEnd="11dp"-->
-<!--        android:text="Nope"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/btn0"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/btn7" />-->
+            />
+    </RelativeLayout>
 
 
 </LinearLayout>
